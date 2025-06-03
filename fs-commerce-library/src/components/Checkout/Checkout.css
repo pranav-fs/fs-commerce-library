@@ -1,0 +1,9 @@
+/* App.css */
+
+.checkout-page {
+  text-align: left; /* Reset from #root */
+  padding: 0; /* Remove global padding if not needed */
+  width: 80vw; /* Let it take full width */
+  margin: 0; /* Remove centering */
+}
+
