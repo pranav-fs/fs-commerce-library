@@ -16,6 +16,16 @@ export const FastSpringProvider = ({ children, storefrontURL }) => {
 
 
     // Set opacity to 0 for elements with the same ID
+    // const setOpacityToZero = () => {
+    //     const elements = document.querySelectorAll("#fsc-embedded-checkout-skeleton");
+    //     elements.forEach((element) => {
+    //         if (element.style.opacity !== "0") {
+    //             element.style.opacity = "0";
+    //             element.style.transition = "opacity 0.5s ease-in-out";
+    //         }
+    //     });
+    // };
+
     const setOpacityToZero = () => {
         const elements = document.querySelectorAll("#fsc-embedded-checkout-skeleton");
         elements.forEach((element) => {
@@ -112,6 +122,9 @@ export const FastSpringProvider = ({ children, storefrontURL }) => {
                 }, 1500);
             };
         } else {
+            setTimeout(() => {
+                    setOpacityToZero();
+                }, 1500);
             // Remove EmbeddedSBL on pages other than checkout
             removeCheckoutScript();
         }

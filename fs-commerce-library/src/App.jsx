@@ -5,12 +5,12 @@ import { BrowserRouter } from 'react-router-dom'
 import Checkout from './components/Checkout/Checkout'
 import './App.css'
 
-function App() {
+function App({store}) {
 
   return (
     <>
       <BrowserRouter>
-          <FastSpringProvider storefrontURL="assignmentse.test.onfastspring.com/embedded-test">
+          <FastSpringProvider storefrontURL={store}>
                 <Checkout />
           </FastSpringProvider>
       </BrowserRouter>

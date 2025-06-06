@@ -1,10 +1,21 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+//main.jsx
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+// import reactToWebComponent from 'react-to-webcomponent';
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+class CheckoutWebComponent extends HTMLElement {
+  connectedCallback(){
+    const store = this.getAttribute('store');
+
+    const root = ReactDOM.createRoot(this);
+    root.render(
+      <React.StrictMode>
+        <App store={store} />
+      </React.StrictMode>
+    );
+  }
+}
+
+// const WebComponent = reactToWebComponent(App, React, ReactDOM);
+customElements.define('checkout-component', CheckoutWebComponent);
