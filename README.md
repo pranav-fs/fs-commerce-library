@@ -61,6 +61,8 @@ In any react component
 <checkout-component store="assignmentse.test.onfastspring.com/embedded-test"><checkout-component>
 ```
 
+Or 
+
 ```jsx
 useEffect(() => {
  const el = document.createElment('checkout-component');
@@ -70,7 +72,7 @@ useEffect(() => {
 ```
 ```jsx
 <div id="checkout"></div>
-'''
+```
 
 
 
