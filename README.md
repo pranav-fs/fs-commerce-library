@@ -18,8 +18,8 @@ A *standalone React-based Checkout UI* compiled into a *Web Component. It can be
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-company/checkout-web-component.git
-cd checkout-web-component
+git clone https://github.com/pranav-fs/fs-commerce-library.git
+cd fs-commerce-library
 npm install
 ```
 
